@@ -1,0 +1,18 @@
+7 a)
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.arange(-10, 10, 0.001)
+y = np.sin(x)
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Plot created by Your Name')
+plt.show()
+
+7 b)
+import sympy
+x = sympy.symbols('x')
+y = sympy.Function('y')(x)
+diff_eq = x**3*sympy.diff(y, x) - x**2*y + y**4*sympy.cos(x)
+sol = sympy.dsolve(diff_eq)
+print(sol)
