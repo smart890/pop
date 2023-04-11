@@ -1,0 +1,21 @@
+5 a)
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.linspace(0, 2, 100)
+y = x**3
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Plot created by Your Name')
+plt.show()
+
+
+5 b)
+import sympy
+x, y = sympy.symbols('x y')
+u = x**3 - 3*x*y**2 + sympy.exp(x)*sympy.cos(y) + 1
+u_xx = sympy.diff(u, x, x)
+u_yy = sympy.diff(u, y, y)
+sum_u_xx_u_yy = u_xx + u_yy
+simplified = sympy.simplify(sum_u_xx_u_yy)
+print(simplified)
