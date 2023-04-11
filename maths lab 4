@@ -1,0 +1,16 @@
+4 a)
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.linspace(0, 2, 100)
+y = x**2
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Plot created by Adesh Gowda')
+plt.show()
+
+4 b)
+from sympy import Limit , Symbol ,exp ,sin
+x= Symbol ('x')
+L= Limit (( sin( x ) )/x ,x , 0 ) . doit ()
+print ( L)
