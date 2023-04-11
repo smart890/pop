@@ -1,0 +1,33 @@
+10 a)
+import matplotlib.pyplot as plt
+import numpy as np
+theta = np.linspace(0, 2*np.pi, 100)
+a = 1
+r1 = a + a*np.cos(theta)
+r2 = a - a*np.cos(theta)
+x1 = r1*np.cos(theta)
+y1 = r1*np.sin(theta)
+x2 = r2*np.cos(theta)
+y2 = r2*np.sin(theta)
+fig, ax = plt.subplots()
+ax.plot(x1, y1, label='r = a + a*cos(theta)')
+ax.plot(x2, y2, label='r = a - a*cos(theta)')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_title('Cardioid curve')
+ax.legend()
+plt.show()
+
+10 b)
+from sympy import *
+x ,y , z= symbols ('x y z')
+w1= integrate ( x ** 2+y ** 2 ,( y ,0 , x ) ,(x ,0 , 1 ) )
+print ( w1 )
+
+10 c)
+from sympy import *
+x= Symbol ('x')
+y= Symbol ('y')
+z= Symbol ('z')
+w2= integrate (( x*y*z ) ,(z ,0 , 3-x-y ) ,(y ,0 , 3-x ) ,(x ,0 , 1 ) )
+print ( w2 )
