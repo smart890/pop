@@ -1,0 +1,17 @@
+3 a)
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.linspace(0, 2, 100)
+y = x
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Plot created by Your Name')
+plt.show()
+
+
+3 b)
+import math
+t = math.pi/2
+r = ((1 + 4*math.cos(t)**2)**(3/2)) / (2*math.sin(t))
+print(r)
