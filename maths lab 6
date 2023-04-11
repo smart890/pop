@@ -1,0 +1,18 @@
+6 a)
+import matplotlib.pyplot as plt
+import numpy as np
+x = np.arange(-10, 10, 0.001)
+y = np.exp(x)
+plt.plot(x, y)
+plt.xlabel('x')
+plt.ylabel('y')
+plt.title('Plot created by Your Name')
+plt.show()
+
+6 b)
+from sympy import* 
+x,y=symbols('x,y')
+y= Function("y")(x)
+y1=Derivative(y,x)
+z1=dsolve(Eq(y1+y*tan(x)-y**3*sec(x),0),y)
+display(z1)
